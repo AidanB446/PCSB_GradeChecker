@@ -3,7 +3,7 @@ import tkinter as tkk
 from tkinter import Tk
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from extFuncs import parseLog
+
 
 
 def getGrades(username, password):
@@ -96,7 +96,6 @@ def submitButtonCallback() :
    
    root.destroy()
    
-   parseLog(username, password)
    grades = getGrades(username, password)
    
    newRoot = Tk()
