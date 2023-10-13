@@ -15,13 +15,12 @@ def getGrades(username, password):
 
    # navigate to the sign in page
    driver.get("https://focus.pcsb.org/focus/Modules.php?modname=misc/Portal.php")
-   print('logging in')
-
+   print("opening browser")
    # login with credentials user provided
    driver.find_element(by=By.ID, value="username-input").send_keys(username)
    driver.find_element(by=By.NAME, value="password").send_keys(password)
    driver.find_element(by=By.XPATH, value="/html/body/div/div[3]/div/div[1]/form/div[2]/div[2]/button").click()
-   print('signing in...')
+   print('attempting sign in...')
    
 
    # this is the solution instead of implicit or explicit wait. It only breaks the loop if the 
